@@ -1,7 +1,7 @@
 function Header({ timeframe, onClick }) {
   return (
     <header className="rounded-2xl bg-Navy900 sm:col-span-3 lg:col-span-1 lg:row-span-2">
-      <div className="bg-Purple600 flex items-center gap-6 p-8 rounded-[inherit] lg:flex-col">
+      <div className="bg-Purple600 flex items-center gap-6 p-8 rounded-[inherit] lg:flex-col lg:items-start">
         <img
           src="images/image-jeremy.png"
           alt="Picture of Jeremy Robson"
