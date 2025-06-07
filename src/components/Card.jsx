@@ -13,15 +13,15 @@ function Card({ image, title, current, previous, index }) {
   }
 
   return (
-    <section
-      className={`${colors[index]} rounded-2xl pt-10 relative z-0 overflow-hidden`}
-    >
-      <img
-        src={image}
-        alt="Icon"
-        className="absolute -top-1/12 right-1/16 -z-1"
-      />
-      <div className="bg-Navy900 p-6 rounded-[inherit] h-full hover:bg-Navy800 cursor-pointer">
+    <section className={`${colors[index]} rounded-t-2xl rounded-b-4xl z-0`}>
+      <div className="relative h-10 lg:h-12 overflow-hidden">
+        <img
+          src={image}
+          alt="Icon"
+          className="absolute -top-1/12 right-1/16 -z-1"
+        />
+      </div>
+      <div className="bg-Navy900 p-6 rounded-2xl hover:bg-Navy800 cursor-pointer">
         <div className="flex justify-between items-center sm:mb-2 lg:mb-4">
           <p className="font-medium">{title}</p>
           <img
