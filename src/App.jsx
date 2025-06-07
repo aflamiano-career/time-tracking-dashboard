@@ -9,7 +9,8 @@ function App() {
   useEffect(function () {
     async function getActivities() {
       try {
-        const res = await fetch("/data/data.json");
+        const res = await fetch("/time-tracking-dashboard/data/data.json");
+        // const res = await fetch("data/data.json");
         if (!res.ok) throw new Error("No response");
         const data = await res.json();
         setActivities(data);
