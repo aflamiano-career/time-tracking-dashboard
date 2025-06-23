@@ -36,6 +36,7 @@ function App() {
             image={`images/icon-${activity.title
               .replace(/\s/g, "-")
               .toLowerCase()}.svg`}
+            timeframe={timeframe}
             title={activity.title}
             current={activity.timeframes[timeframe].current}
             previous={activity.timeframes[timeframe].previous}

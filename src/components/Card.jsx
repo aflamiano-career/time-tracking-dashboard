@@ -1,4 +1,4 @@
-function Card({ image, title, current, previous, index }) {
+function Card({ image, timeframe, title, current, previous, index }) {
   const colors = [
     "bg-Orange300",
     "bg-Blue300",
@@ -10,6 +10,17 @@ function Card({ image, title, current, previous, index }) {
 
   function checkHours(hour) {
     return hour < 1 ? "-" : hour > 1 ? `${hour}hrs` : `${hour}hr`;
+  }
+
+  function checkLast(timeframe) {
+    switch (timeframe) {
+      case "weekly":
+        return "Last Week";
+      case "monthly":
+        return "Last Month";
+      default:
+        return "Yesterday";
+    }
   }
 
   return (
@@ -33,7 +44,7 @@ function Card({ image, title, current, previous, index }) {
         <div className="flex justify-between items-center sm:flex-col sm:items-start">
           <h2 className="font-light text-4xl my-2">{checkHours(current)}</h2>
           <p className="text-base text-Navy200">
-            Last Week - {checkHours(previous)}
+            {checkLast(timeframe)} - {checkHours(previous)}
           </p>
         </div>
       </div>
